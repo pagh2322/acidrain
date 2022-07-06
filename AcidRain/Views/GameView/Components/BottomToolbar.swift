@@ -40,9 +40,9 @@ class BottomToolbar: UIView {
     
     func makeConstraints() {
         self.textField.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12))
-            make.width.equalTo(UIScreen.main.bounds.width / 2 - 24)
-            make.height.greaterThanOrEqualTo(36)
+            make.leading.equalToSuperview().inset(Consts.GameView.BottomToolbar.TextField.edgeInsets)
+            make.width.equalTo(Consts.GameView.BottomToolbar.TextField.width)
+            make.height.greaterThanOrEqualTo(Consts.GameView.BottomToolbar.TextField.height)
         }
         
         self.lifeLabel.snp.makeConstraints { make in

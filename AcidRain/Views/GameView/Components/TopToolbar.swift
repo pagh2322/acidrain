@@ -47,12 +47,12 @@ class TopToolbar: UIView {
     func makeConstraints() {
         self.scoreLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(self.snp.leading).inset(UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 0))
+            make.leading.equalTo(self.snp.leading).inset(Consts.GameView.TopToolbar.ScoreLabel.edgeInsets)
         }
         self.settingButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalTo(self.snp.trailing).inset(UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 20))
-            make.width.height.greaterThanOrEqualTo(28)
+            make.trailing.equalTo(self.snp.trailing).inset(Consts.GameView.TopToolbar.SettingButton.edgeInsets)
+            make.width.height.greaterThanOrEqualTo(Consts.GameView.TopToolbar.SettingButton.width)
         }
         self.tempPersonIcon.snp.makeConstraints { make in
             make.centerY.equalToSuperview()

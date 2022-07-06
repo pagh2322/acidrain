@@ -23,11 +23,11 @@ class HomeView: UIView {
         return singleModeButton
     }()
     
-    let multiModeLabel: UILabel = {
-        let multiModeLabel = UILabel()
-        multiModeLabel.text = "Multi"
-        multiModeLabel.textAlignment = .center
-        return multiModeLabel
+    let multiModeButton: UIButton = {
+        let multiModeButton = UIButton()
+        multiModeButton.setTitleColor(UIColor.brown, for: .normal)
+        multiModeButton.setTitle("Multi", for: .normal)
+        return multiModeButton
     }()
     
     override init(frame: CGRect) {
@@ -42,7 +42,7 @@ class HomeView: UIView {
     }
     
     func makSubviews() {
-        [self.logoLabel, self.singleModeButton, self.multiModeLabel].forEach { self.addSubview($0) }
+        [self.logoLabel, self.singleModeButton, self.multiModeButton].forEach { self.addSubview($0) }
     }
     
     func makeConstraints() {
@@ -56,7 +56,7 @@ class HomeView: UIView {
             make.top.equalTo(self.logoLabel.snp.bottom).offset(50)
         }
         
-        self.multiModeLabel.snp.makeConstraints { make in
+        self.multiModeButton.snp.makeConstraints { make in
             make.centerX.equalTo(self.singleModeButton.snp.centerX)
             make.top.equalTo(self.singleModeButton.snp.bottom).offset(20)
         }

@@ -14,13 +14,15 @@
 		B7221D692874517300D350E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7221D672874517300D350E8 /* LaunchScreen.storyboard */; };
 		B7221D7328745BB100D350E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D7228745BB100D350E8 /* HomeViewController.swift */; };
 		B7221D7528745C3A00D350E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D7428745C3A00D350E8 /* HomeView.swift */; };
-		B7221D7828745C6600D350E8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7221D7728745C6600D350E8 /* SnapKit */; };
 		B7221D7B2874603700D350E8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D7A2874603700D350E8 /* GameView.swift */; };
 		B7221D7E287460CB00D350E8 /* TopToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D7D287460CB00D350E8 /* TopToolbar.swift */; };
 		B7221D8228747D2100D350E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D8128747D2100D350E8 /* Consts.swift */; };
 		B7221D8428747D3900D350E8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D8328747D3900D350E8 /* View.swift */; };
 		B7221D87287481FF00D350E8 /* BottomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D86287481FF00D350E8 /* BottomToolbar.swift */; };
-		B7221D8B2874867400D350E8 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D8A2874867400D350E8 /* Word.swift */; };
+		B7221D8B2874867400D350E8 /* WordBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221D8A2874867400D350E8 /* WordBlock.swift */; };
+		B7221DB428759D0200D350E8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7221DB328759D0200D350E8 /* GameKit.framework */; };
+		B7221DB62875C10700D350E8 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7221DB52875C10700D350E8 /* Scene.swift */; };
+		B7221DBC2875C31900D350E8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7221DBB2875C31900D350E8 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +39,9 @@
 		B7221D8128747D2100D350E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		B7221D8328747D3900D350E8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		B7221D86287481FF00D350E8 /* BottomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolbar.swift; sourceTree = "<group>"; };
-		B7221D8A2874867400D350E8 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		B7221D8A2874867400D350E8 /* WordBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBlock.swift; sourceTree = "<group>"; };
+		B7221DB328759D0200D350E8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B7221DB52875C10700D350E8 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7221D7828745C6600D350E8 /* SnapKit in Frameworks */,
+				B7221DB428759D0200D350E8 /* GameKit.framework in Frameworks */,
+				B7221DBC2875C31900D350E8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +62,7 @@
 			children = (
 				B7221D572874517000D350E8 /* AcidRain */,
 				B7221D562874517000D350E8 /* Products */,
+				B7221DB228759D0200D350E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +77,8 @@
 		B7221D572874517000D350E8 /* AcidRain */ = {
 			isa = PBXGroup;
 			children = (
-				B7221D882874861900D350E8 /* Scenes */,
 				B7221D7F28747D1100D350E8 /* Others */,
+				B7221D882874861900D350E8 /* Scenes */,
 				B7221D7128745BA100D350E8 /* Views */,
 				B7221D6F28745AEE00D350E8 /* Resources */,
 			);
@@ -139,6 +145,7 @@
 			children = (
 				B7221D8128747D2100D350E8 /* Consts.swift */,
 				B7221D8328747D3900D350E8 /* View.swift */,
+				B7221DB52875C10700D350E8 /* Scene.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -155,9 +162,17 @@
 		B7221D892874865100D350E8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B7221D8A2874867400D350E8 /* Word.swift */,
+				B7221D8A2874867400D350E8 /* WordBlock.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B7221DB228759D0200D350E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7221DB328759D0200D350E8 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +192,7 @@
 			);
 			name = AcidRain;
 			packageProductDependencies = (
-				B7221D7728745C6600D350E8 /* SnapKit */,
+				B7221DBB2875C31900D350E8 /* SnapKit */,
 			);
 			productName = AcidRain;
 			productReference = B7221D552874517000D350E8 /* AcidRain.app */;
@@ -208,7 +223,7 @@
 			);
 			mainGroup = B7221D4C2874517000D350E8;
 			packageReferences = (
-				B7221D7628745C6600D350E8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B7221DBA2875C31900D350E8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = B7221D562874517000D350E8 /* Products */;
 			projectDirPath = "";
@@ -242,7 +257,8 @@
 				B7221D592874517000D350E8 /* AppDelegate.swift in Sources */,
 				B7221D7528745C3A00D350E8 /* HomeView.swift in Sources */,
 				B7221D8428747D3900D350E8 /* View.swift in Sources */,
-				B7221D8B2874867400D350E8 /* Word.swift in Sources */,
+				B7221DB62875C10700D350E8 /* Scene.swift in Sources */,
+				B7221D8B2874867400D350E8 /* WordBlock.swift in Sources */,
 				B7221D7B2874603700D350E8 /* GameView.swift in Sources */,
 				B7221D7E287460CB00D350E8 /* TopToolbar.swift in Sources */,
 				B7221D87287481FF00D350E8 /* BottomToolbar.swift in Sources */,
@@ -389,9 +405,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,9 +435,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +478,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B7221D7628745C6600D350E8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		B7221DBA2875C31900D350E8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -469,9 +489,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B7221D7728745C6600D350E8 /* SnapKit */ = {
+		B7221DBB2875C31900D350E8 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B7221D7628745C6600D350E8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = B7221DBA2875C31900D350E8 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

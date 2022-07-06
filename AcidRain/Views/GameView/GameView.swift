@@ -35,26 +35,26 @@ class GameView: UIView {
         self.topToolbar.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(self.safeAreaLayoutGuide)
-            make.height.greaterThanOrEqualTo(40)
+            make.height.greaterThanOrEqualTo(Consts.GameView.TopToolbar.height)
         }
         
         self.skView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(self.topToolbar.snp.bottom)
-            self.skViewHeightConstraint = make.height.greaterThanOrEqualTo(UIScreen.main.bounds.height - 40 - 8 - 40 - Consts.statusHeight).constraint
+            self.skViewHeightConstraint = make.height.greaterThanOrEqualTo(Consts.GameView.SKView.heightWithNoKeyboard).constraint
         }
         
         self.bottomToolbar.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12))
-            make.top.equalTo(self.skView.snp.bottom).offset(4)
-            make.height.greaterThanOrEqualTo(40)
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(self.skView.snp.bottom).offset(Consts.GameView.BottomToolbar.offset)
+            make.height.greaterThanOrEqualTo(Consts.GameView.BottomToolbar.height)
         }
     }
     
     func updateWithKeyboardHeight(_ height: CGFloat) {
         self.skViewHeightConstraint.deactivate()
         self.skView.snp.makeConstraints { make in
-            self.skViewHeightConstraint = make.height.greaterThanOrEqualTo(UIScreen.main.bounds.height - height - 40 - 8 - 40 - Consts.statusHeight).constraint
+            self.skViewHeightConstraint = make.height.greaterThanOrEqualTo(Consts.GameView.SKView.heightWithNoKeyboard - height).constraint
         }
     }
 }
